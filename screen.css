@@ -1,0 +1,371 @@
+/* General Body elements */
+body {
+    font-size: 16px;
+    background-color: #FFE7CD;
+    color: #3C2B15;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Main header */
+h1 {
+    margin-top: 30px;
+    color: #370E48;
+    font-size: 32px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+/* Sub headers */
+h2 {
+    font-size: 35px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+/* Paragraphs */
+p {
+    color: #3C2B15;
+    font-family: Arial, sans-serif;
+    margin: 1em 0;
+    padding: 1em;
+    box-sizing: border-box;
+    max-width: 600px;
+}
+
+strong {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+/* Links */
+a {
+    color: #0043BF;
+    text-decoration: underline;
+    font-family: Arial, sans-serif;
+    padding: 5px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.recipeslist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.recipeslist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 20px;
+    /* evenly spaced grid */
+}
+
+.recipesingle {
+    display: flex;
+    flex-direction: column;
+    /* stack image and text vertically */
+    align-items: center;
+    /* center the text under the image */
+    width: 250px;
+    /* control how wide each “card” is */
+}
+
+.recipesingle img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipesingle p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.recipepreview {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.recipepreviewbig img {
+    width: 750px;
+    border-radius: 10px;
+
+}
+
+.recipepreviewbig {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.recipepreviewsmall img {
+    width: 350px;
+    border-radius: 10px;
+
+}
+
+.recipepreviewsmall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.topnav {
+    background-color: #433527;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Links in navigation menu */
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.searchcontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.searchcontainer input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.searchcontainer button {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-left: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+.searchcontainer button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        background-color: #FFE7CD;
+        color: #3C2B15;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Main header */
+    h1 {
+        margin-top: 30px;
+        color: #370E48;
+        font-size: 32px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    /* Sub headers */
+    h2 {
+        font-size: 35px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 15px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    /* Paragraphs */
+    p {
+        color: #3C2B15;
+        font-family: Arial, sans-serif;
+        margin: 1em 0;
+        padding: 1em;
+        box-sizing: border-box;
+        max-width: 600px;
+    }
+
+    strong {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+
+    /* Links */
+    a {
+        color: #0043BF;
+        text-decoration: underline;
+        font-family: Arial, sans-serif;
+        padding: 5px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 25px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: 18px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    p {
+        padding: 1.5em;
+        text-align: center;
+        max-width: 80vw;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    video {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    div {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    p {
+        max-width: 1000px;
+        font-size: 20px;
+        margin: auto;
+    }
+
+    a {
+        color: #000000;
+        /* text-decoration: underline; */
+        font-family: Arial, sans-serif;
+        padding: 5px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+    }
+
+    /* a.caseStudyLink:visited {
+        color: #000000;
+        border-color: #000000;
+    } */
+
+    h3 {
+        font-size: 25px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: 18px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    li {
+        display: block;
+    }
+}
