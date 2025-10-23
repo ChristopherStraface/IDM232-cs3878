@@ -257,6 +257,32 @@ a {
         border: 1px solid transparent;
         box-sizing: border-box;
     }
+
+   .recipepreviewsmall img {
+    width: 225px;
+    height: 175px;
+    border-radius: 10px;
+
+}
+
+   .recipepreviewbig img {
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+
+}
+
+.errorImage {
+    width: 200px;
+    height: 200px;
+}
+
+.helpImage {
+    width: 200px;
+    height: 200px;
+}
+
+
 }
 
 @media screen and (min-width: 768px) {
