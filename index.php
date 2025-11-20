@@ -63,7 +63,7 @@ $filters = [
             </a>
         </div>
 
-        <div id="filterbutton">
+        <div id="filterbutton-container">
             <button id="filterbutton">Filters</button>
         </div>
     </div>
