@@ -162,8 +162,6 @@ ul {
     display: block;
 }
 
-
-
 .searchcontainer input[type="text"] {
     width: 300px;
     padding: 10px;
@@ -195,11 +193,51 @@ ul {
     height: 40px;
 }
 
+
 .helpbutton {
     margin: 0;
     padding: 0;
 }
 
+#filterbutton {
+    padding: 5px 10px;
+    border-left: none;
+    background-color: #37005e;
+    color: white;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+}
+
+#filteroptionbutton {
+    padding: 5px 10px;
+    border-left: none;
+    background-color: #37005e;
+    color: white;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+}
+
+.menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  background: #d9d0d0;
+  border-radius: 8px;
+
+  /* IMPORTANT: remove vertical padding when closed */
+  padding-top: 0;
+  padding-bottom: 0;
+
+  /* Optional safety: remove margins so nothing shows */
+  margin-top: 0;
+}
+
+/* When open */
+.menu.open {
+  max-height: 500px; /* should be bigger than your content */
+  padding: 20px;
+  margin-top: 10px;
+}
 
 .searchandhelp {
     display: flex;
@@ -210,7 +248,6 @@ ul {
     background-color: #c4c4c4;
     padding: 20px;
 }
-
 
 .searchcontainer {
     display: flex;
@@ -226,7 +263,9 @@ ul {
     /* prevents full-width stretching */
 }
 
-
+.hidden {
+  display: none;
+}
 
 @media screen and (max-width: 600px) {
     body {
