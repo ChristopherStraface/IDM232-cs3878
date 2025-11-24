@@ -1,0 +1,4 @@
+SetEnv DB_SERVER localhost
+SetEnv DB_USERNAME cs3878
+SetEnv DB_PASSWORD t1FacAI4LCe0dbDm
+SetEnv DB_NAME cs3878_db
