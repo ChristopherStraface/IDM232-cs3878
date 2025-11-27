@@ -12,15 +12,13 @@
 
     <div class="topnav">
         <div id="myLinks">
-            <a href="index.html">Home</a>
-            <a href="recipes.html">Recipes</a>
-            <a href="filterresults.html">Filtered list</a>
-            <a href="help.html">Help</a>
-            <a href="resultsnotfound.html">Results Not Found</a>
+            <a href="index.php">Home</a>
+            <!-- <a href="recipes.php">Recipes</a>
+            <a href="filterresults.php">Filtered list</a> -->
+            <a href="help.php">Help</a>
+            <a href="resultsnotfound.php">Results Not Found</a>
         </div>
     </div>
-
-
 
     <br>
     <br>
@@ -44,30 +42,14 @@
 
     <h1>Help Page</h1>
     <p>Need help? Check out these steps below</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est
-        laborum.</p>
+    <p>On this website, you are able to click or tap on any of the displayed recipes. You can use the "Filters" button to search through the given filter options, or can directly search for something yourself. Here are the steps you can take to use this website:</p>
 
     <ul>
-        <li>4 Boneless, Skinless Chicken Breasts</li>
-        <li>1 Tbsp Ancho Chile Paste</li>
-        <li>2 Tbsps Crème Fraîche</li>
-        <li>3 Tbsps Golden Raisins</li>
+        <li>1. Scroll through all of the recipes available</li>
+        <li>2. If you can't find one you like, try searching for keywords with the search bar</li>
+        <li>3. If keywords aren't helpful for you, try using the filters, which apply to every recipe</li>
+        <li>4. Interact with the recipe, follow the instructions, and enjoy!</li>
     </ul>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est
-        laborum.</p>
-
-
 
 
 </body>

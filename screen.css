@@ -84,7 +84,6 @@ ul {
     flex-flow: row wrap;
     justify-content: space-around;
     gap: 20px;
-    /* evenly spaced grid */
 }
 
 .recipesingle {
@@ -146,9 +145,9 @@ ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;       
-    left: 0;           
-    top: 0;            
+    width: 100%;
+    left: 0;
+    top: 0;
     gap: 50px;
 }
 
@@ -193,10 +192,19 @@ ul {
     height: 40px;
 }
 
-
 .helpbutton {
     margin: 0;
     padding: 0;
+}
+
+.filteroption {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-left: none;
+    background-color: #37005e;
+    color: white;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
 }
 
 #filterbutton {
@@ -218,25 +226,20 @@ ul {
 }
 
 .menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-  background: #d9d0d0;
-  border-radius: 8px;
-
-  /* IMPORTANT: remove vertical padding when closed */
-  padding-top: 0;
-  padding-bottom: 0;
-
-  /* Optional safety: remove margins so nothing shows */
-  margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    background: #d9d0d0;
+    border-radius: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
 }
 
-/* When open */
 .menu.open {
-  max-height: 500px; /* should be bigger than your content */
-  padding: 20px;
-  margin-top: 10px;
+    max-height: 500px;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .searchandhelp {
@@ -253,80 +256,98 @@ ul {
     display: flex;
     align-items: center;
     margin: 0;
-    /* remove any extra top margin */
 }
 
 .searchcontainer form {
     display: flex;
     align-items: center;
     width: auto;
-    /* prevents full-width stretching */
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
+
+.recipe-page img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+}
+
+.helpImage {
+    width: 250px;
+    height: 250px;
+}
+
+.errorImage {
+    width: 250px;
+    height: 250px;
+}
+
 
 @media screen and (max-width: 600px) {
     body {
-    font-size: 16px;
-    background-color: #c4c4c4;
-    color: #000000;
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, sans-serif;
-    text-align: center;
-    box-sizing: border-box;
-}
+        font-size: 16px;
+        background-color: #c4c4c4;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        font-family: Tahoma, sans-serif;
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-/* Main header */
-h1 {
-    margin-top: 30px;
-    color: #230230;
-    font-size: 32px;
-    font-family: 'Segoe UI', Tahoma, serif;
-    font-weight: bold;
-    margin: 0.5em 0;
-    padding: 0.5em;
-    box-sizing: border-box;
-}
+    /* Main header */
+    h1 {
+        margin-top: 30px;
+        color: #230230;
+        font-size: 32px;
+        font-family: 'Segoe UI', Tahoma, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
 
-/* Sub headers */
-h2 {
-    font-size: 35px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    margin: 0.5em 0;
-    padding: 0.5em;
-    box-sizing: border-box;
-}
+    /* Sub headers */
+    h2 {
+        font-size: 35px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
 
-h3,
-h4,
-h5,
-h6 {
-    font-size: 15px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    margin: 0.5em 0;
-    padding: 0.5em;
-    box-sizing: border-box;
-}
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 15px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
 
-/* Paragraphs */
-p {
-    color: #3C2B15;
-    font-family: Tahoma, sans-serif;
-    margin: 1em 0;
-    padding: 1em;
-    box-sizing: border-box;
-    max-width: 600px;
-}
+    /* Paragraphs */
+    p {
+        color: #3C2B15;
+        font-family: Tahoma, sans-serif;
+        margin: 1em 0;
+        padding: 1em;
+        box-sizing: border-box;
+        max-width: 600px;
+    }
 
-strong {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-}
+    strong {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
 
     /* Links */
     a {
@@ -341,6 +362,17 @@ strong {
         list-style-type: none;
         text-align: center;
         margin-right: 60px;
+    }
+
+    .searchandhelp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin-left: 20px;
+        background-color: #c4c4c4;
+        padding: 20px;
     }
 
     .recipepreviewsmall img {
@@ -367,18 +399,33 @@ strong {
         height: 200px;
     }
 
-  .topnav {
-    width: 100%;
-    gap: 5px;
-    padding: 5px 0;
-    font-size: 14px;
-    flex-wrap: wrap; /* or flex-direction: column; if you prefer stacking */
-  }
+    .recipe-page img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 1.5rem auto;
+        border-radius: 10px;
+    }
 
-  .topnav a {
-    padding: 10px 8px;
-    font-size: 14px;
-  }
+    .recipe-page .step-image {
+        max-width: 300px;
+        margin: 1rem auto;
+        border-radius: 8px;
+    }
+
+    .topnav {
+        width: 100%;
+        gap: 5px;
+        padding: 5px 0;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .topnav a {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
 
 
 }
@@ -419,14 +466,10 @@ strong {
         max-width: 80vw;
     }
 
-    img {
-        width: 300px;
-        height: 300px;
-    }
-
     video {
         width: 600px;
     }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -480,4 +523,20 @@ strong {
     li {
         display: block;
     }
+
+    .recipe-page img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 1.5rem auto;
+        border-radius: 10px;
+    }
+
+    .recipe-page .step-image {
+        max-width: 500px;
+        margin: 1rem auto;
+        border-radius: 8px;
+    }
+
 }
