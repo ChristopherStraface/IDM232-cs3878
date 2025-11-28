@@ -73,7 +73,8 @@ mysqli_close($connection);
 
 
         <h2>Steps</h2>
-        <? $steps = htmlspecialchars($recipe['steps']);
+        <?php
+        $steps = htmlspecialchars($recipe['steps']);
         $steps = nl2br($steps);
 
         $steps = preg_replace_callback('/\[IMG(\d+)\]/', function ($match) use ($recipeFolder, $imageList) {
@@ -87,7 +88,6 @@ mysqli_close($connection);
 
         echo "<p>$steps</p>";
         ?>
-
     </div>
 
 
