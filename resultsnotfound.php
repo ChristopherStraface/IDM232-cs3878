@@ -13,10 +13,7 @@
     <div class="topnav">
         <div id="myLinks">
             <a href="index.php">Home</a>
-            <!-- <a href="recipes.php">Recipes</a>
-            <a href="filterresults.php">Filtered list</a> -->
             <a href="help.php">Help</a>
-            <a href="resultsnotfound.php">Results Not Found</a>
         </div>
     </div>
 
@@ -26,13 +23,13 @@
 
     <div class="searchandhelp">
         <div class="searchcontainer">
-            <form action="filterresults.html" method="get">
+            <form action="filterresults.php" method="get">
                 <input type="text" placeholder="Search..." name="search">
                 <button type="submit">Search</button>
             </form>
         </div>
         <div class="helpbutton">
-            <a href="help.html">
+            <a href="help.php">
                 <img src="Media/help.jpg" alt="Help Button">
             </a>
         </div>

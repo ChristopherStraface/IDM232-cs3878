@@ -13,10 +13,7 @@
     <div class="topnav">
         <div id="myLinks">
             <a href="index.php">Home</a>
-            <!-- <a href="recipes.php">Recipes</a>
-            <a href="filterresults.php">Filtered list</a> -->
             <a href="help.php">Help</a>
-            <a href="resultsnotfound.php">Results Not Found</a>
         </div>
     </div>
 

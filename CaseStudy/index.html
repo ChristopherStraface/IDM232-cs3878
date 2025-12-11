@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cs3878 IDM 232 Case Study</title>
+    <link rel="stylesheet" href="screen.css">
+</head>
+
+<body>
+    <div class="CaseStudy">
+
+        <img class="case-img" src="Media/HeroImage232.png" alt="HeroImage">
+
+        <h1>Overview</h1>
+
+        <p>For this project, I developed a cookbook website using HTML, CSS, JavaScript, and PHP with the goal of
+            exporting over 40 unique recipes into a database, which would be displayed via my website. I was required to
+            add searching and filtering functionality for the site as well. I worked with a team to import the recipe
+            data into a spreadsheet, which was exported into a MySQL database to be used for my individual site. After
+            creating wireframes for my initial design, I coded a functioning prototype in HTML before any database
+            content was added. Then, I inserted the proper content from the database via PHP and refined the filtering
+            and searching with JavaScript, meeting the project’s standards and completing a viable product.
+        </p>
+
+        <h1>The Context and Challenges</h1>
+
+        <p>I developed a cookbook website where users can interact with over 40 different recipes, read their
+            descriptions, follow their steps and instructions, and search for specific recipes and also filter through
+            them. I had 10 weeks to develop the entire website from scratch using HTML, CSS, and light JavaScript
+            coding, as well as requiring PHP code to connect to a local database, which contains the data for each
+            recipe. </p>
+
+        <p>The problem was that I had none of the recipe data to start with, and had to fill my database in manually.
+            Each recipe’s information was in a PDF, where the relevant data had to be manually extracted into a
+            spreadsheet to be exported as a CSV file, which could then be imported into a MySQL database. To speed up
+            this process, I teamed up with other students to divide and conquer the extraction work, where we created a
+            spreadsheet that we could all use individually for our projects.</p>
+
+        <p>So now the goal was to build a website from HTML and CSS coding that met the minimum viable standard of
+            recipes, searching, and filtering, and then replace it with PHP functionality that connects to my database
+            to display all of the unique recipe information, as opposed to manually hard-coding every recipe in.</p>
+
+        <h1>The Process</h1>
+
+        <p>Starting with the design of the website itself, I took inspiration from other basic recipe websites, such as
+            allrecipes.com and the recipes found on foodnetwork.com as well. To map out the skeleton of my website, I
+            created wireframes in Figma to illustrate where content would ideally be placed, as well as creating
+            different references for different screen sizes to ease the process of adding further responsiveness</p>
+
+        <img class="case-img" src="Media/Wireframes.png" alt="Wireframes">
+
+        <p>Then, I got to work developing the initial “Alpha” version of the site, which was only the HTML and CSS,
+            before any database connection was added. This Alpha was made to ensure the structure of the website was
+            already created and ready to have the database content inserted into it to avoid having to work on both at
+            the same time. Instead, I added templates for each major page that would eventually have their final content
+            inserted once the connection was established.</p>
+
+        <img class="case-img" src="Media/Alpha.png" alt="Alpha">
+
+        <p>Once the Alpha was completed, all that was left to do was add the content from my database and make any final
+            touches to the site’s presentation.
+        </p>
+
+        <h1>The Solution
+        </h1>
+
+        <p>This brings me to the final version of the project, which includes the final additions of the database
+            content into the main pages. For starters, the home page now has the proper images and titles displayed for
+            every recipe instead of placeholders.
+        </p>
+
+        <p>The single recipe flow now shows every unique image, ingredient list, and instruction, dynamically added
+            based on how many of each appear in the database row corresponding to the current recipe. This means that
+            recipes with a different number of ingredients, images, or steps do not break the site when trying to load,
+            meaning all recipes can be viewed properly.</p>
+
+        <p>The searching and filtering functions work by searching the database for identical or similar phrases that
+            appear in the database’s columns for names, ingredients, and descriptions. This way, the database can be
+            changed without breaking the search/filter functionality.</p>
+
+        <p>Lastly, two additional pages don’t use the database’s content. First is the Help page, which describes in
+            detail the site’s functions and how to use them. Second is the Results Not Found page, which only appears
+            when a user clicks on the Search button without anything inputted in the search field. These pages help to
+            smooth the overall experience, assisting users who may not understand the website’s functions or
+            accidentally search without inputting any criteria.</p>
+
+        <h1>The Results</h1>
+
+        <p>Overall, this was a successful project that was able to meet its goals of viability, providing all recipe
+            content with working searching and filtering functionality. Every provided recipe was inserted properly into
+            my database, which was connected to my site with PHP code as required. So by the standards set for this
+            project, this website is fully complete and functional.
+        </p>
+
+    </div>
+</body>
+
+</html>

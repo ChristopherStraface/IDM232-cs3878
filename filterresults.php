@@ -14,7 +14,11 @@ $sql = "SELECT id, recipe_name, images, category
         WHERE 1";
 
 if (!empty($search)) {
-    $sql .= " AND recipe_name LIKE '%$search%'";
+    $sql .= " AND (
+        recipe_name LIKE '%$search%' 
+        OR ingredients LIKE '%$search%' 
+        OR recipe_description LIKE '%$search%'
+    )";
 }
 
 if (!empty($filter)) {
@@ -58,10 +62,7 @@ if (mysqli_num_rows($result) === 0) {
     <div class="topnav">
         <div id="myLinks">
             <a href="index.php">Home</a>
-            <!-- <a href="recipes.php">Recipes</a>
-            <a href="filterresults.php">Filtered list</a> -->
             <a href="help.php">Help</a>
-            <a href="resultsnotfound.php">Results Not Found</a>
         </div>
     </div>
 
@@ -132,7 +133,8 @@ if (mysqli_num_rows($result) === 0) {
         mysqli_close($connection);
         ?>
     </div>
-
+<br>
+<br>
     <script>
         document.getElementById("filterbutton").addEventListener("click", () => {
             document.getElementById("filter-menu").classList.toggle("open");

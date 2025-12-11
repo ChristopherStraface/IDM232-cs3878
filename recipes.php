@@ -44,23 +44,23 @@ mysqli_close($connection);
     <div class="topnav">
         <div id="myLinks">
             <a href="index.php">Home</a>
-            <!-- <a href="recipes.php">Recipes</a>
-            <a href="filterresults.php">Filtered list</a> -->
             <a href="help.php">Help</a>'
-            <a href="resultsnotfound.php">Results Not Found</a>
         </div>
     </div>
     <br>
     <br>
     <div class="recipe-page">
         <h1><?php echo htmlspecialchars($recipe['recipe_name']); ?></h1>
+        <br>
+        <br>
         <img src="<?php echo $recipeFolder . $imageList[0]; ?>" alt="Recipe Image 1">
 
-
+        <div class="description">
         <p><?php echo nl2br(htmlspecialchars($recipe['recipe_description'])); ?></p>
         <img src="<?php echo $recipeFolder . $imageList[1]; ?>" alt="Recipe Image 2">
-
-
+        </div>
+<br>
+<br>
         <h2>Ingredients</h2>
         <ul>
             <?php
@@ -70,9 +70,11 @@ mysqli_close($connection);
             }
             ?>
         </ul>
-
+<br>
+<br>
 
         <h2>Steps</h2>
+        <div class="steps">
         <?php
         $steps = htmlspecialchars($recipe['steps']);
         $steps = nl2br($steps);
@@ -85,11 +87,13 @@ mysqli_close($connection);
             }
             return '';
         }, $steps);
-
-        echo "<p>$steps</p>";
+        echo $steps;
         ?>
-    </div>
+        </div>
 
+    </div>
+<br>
+<br>
 
 </body>
 

@@ -11,14 +11,10 @@
 
 <body>
 
-```
 <div class="topnav">
     <div id="myLinks">
         <a href="index.php">Home</a>
-        <!-- <a href="recipes.php">Recipes</a>
-        <a href="filterresults.php">Filtered list</a> -->
         <a href="help.php">Help</a>
-        <a href="resultsnotfound.php">Results Not Found</a>
     </div>
 </div>
 <br><br><br>
@@ -31,7 +27,7 @@
         </form>
     </div>
     <div class="helpbutton">
-        <a href="help.html">
+        <a href="help.php">
             <img src="Media/help.jpg" alt="Help Button">
         </a>
     </div>
@@ -41,7 +37,7 @@
 </div>
 
 <div id="filter-menu" class="menu">
-    <h2>Filter Recipes</h2>
+    <h1>Filter Recipes</h1>
     <button class="filteroption" data-filter="Vegetarian">Vegetarian</button>
     <button class="filteroption" data-filter="Pasta">Pasta</button>
     <button class="filteroption" data-filter="Sandwiches">Sandwiches</button>
@@ -92,7 +88,8 @@
     mysqli_close($connection);
     ?>
 </div>
-
+<br>
+<br>
 <script>
     document.getElementById("filterbutton").addEventListener("click", () => {
         document.getElementById("filter-menu").classList.toggle("open");
@@ -105,7 +102,6 @@
         });
     });
 </script>
-```
 
 </body>
 </html>
