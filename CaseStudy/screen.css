@@ -33,6 +33,15 @@ p {
     border-radius: 4px;
 }
 
+video {
+    display: block;
+    width: 70%;
+    max-width: 700px;
+    height: auto;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    border-radius: 4px;
+}
 
 @media screen and (max-width: 600px) {
 
