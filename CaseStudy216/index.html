@@ -1,21 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cs3878 IDM 216Case Study</title>
+    <!--
+    ╔══════════════════════════════════════════════════════════╗
+    ║  IDM216 Case Study Template                              ║
+    ║  Based on C. To's final case study — Winter 2026         ║
+    ║                                                          ║
+    ║  HOW TO USE THIS FILE                                    ║
+    ║  1. Find every [BRACKETED] placeholder and replace it.   ║
+    ║  2. Drop your images into an img/ folder next to this    ║
+    ║     file and update the src attributes.                  ║
+    ║  3. Update the <title> and nav-logo below.               ║
+    ║  4. Add/remove .process-sub subheadings as needed to     ║
+    ║     break up your process narrative.                     ║
+    ║  5. To add/remove features: duplicate a .feature-item.   ║
+    ║     Alternate: add class="reverse" for right-facing img. ║
+    ╚══════════════════════════════════════════════════════════╝
+    -->
+    <title>IDM216 cs3878 Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400;1,9..40,500;1,9..40,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="screen.css">
 </head>
 
+<!-- Lightbox — sits outside body, toggled by JS -->
+<div class="lightbox-overlay" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
 <body>
-    <div class="CaseStudy">
 
-        <h1>IDM216 CASE STUDY CS3878</h1>
-    
-    
+    <!-- ═══════════════════════════════════════
+         NAV
+         · Edit nav-logo and nav-label text.
+         · The hamburger works on screens ≤860 px via CSS.
+    ════════════════════════════════════════ -->
+    <nav>
+        <span class="nav-logo">Christopher Straface</span>
+
+        <!-- CSS-only hamburger; do not remove the id/for pairing -->
+        <input type="checkbox" id="nav-open" aria-hidden="true">
+        <label class="nav-toggle" for="nav-open" aria-label="Toggle navigation">
+            <span class="bar-top"></span>
+            <span class="bar-mid"></span>
+            <span class="bar-bot"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#context">Context</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#results">Results</a></li>
+        </ul>
+
+        <span class="nav-label">IDM216 | Case Study</span>
+    </nav>
+
+    <div class="page-wrapper">
+        <div class="card">
+
+            <!-- ═══════════════════════════════════════
+                 HERO IMAGE
+                 Replace src with your screenshot/mockup.
+                 Delete the .hero-placeholder block once image is set.
+            ════════════════════════════════════════ -->
+            <div class="hero-img">
+                <img src="img/HeroImage.png" alt="KC's Fresh Fruit & Smoothies hero image" style="height: 100%; width: auto;">
+
+                <!-- DELETE this placeholder once your image is added above -->
+            </div>
+
+            <!-- Section jump bar (mirrors nav links) -->
+            <div class="section-nav-bar">
+                <a class="section-nav-item" href="#overview">Overview</a>
+                <a class="section-nav-item" href="#context">Context</a>
+                <a class="section-nav-item" href="#process">Process</a>
+                <a class="section-nav-item" href="#solution">Solution</a>
+                <a class="section-nav-item" href="#results">Results</a>
+            </div>
+
+            <div class="content-area">
+
+                <!-- ═══════════════════════════════════════
+                     TITLE
+                ════════════════════════════════════════ -->
+                <div class="title-block" id="overview">
+                    <h1 class="title-main">KC's Fresh Fruit & Smoothies</h1>
+                    <p class="title-meta">March 17th, 2026 | Christopher Straface</p>
+                </div>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION 1 — OVERVIEW
+                     Write this last. Summarize: problem, solution, key results.
+                     ~1–2 paragraphs.
+                ════════════════════════════════════════ -->
+                <div class="two-col">
+                    <div>
+                        <p class="section-heading">Introduction</p>
+                        <h2 class="section-title">Overview</h2>
+                        <p class="section-body">
+                        On a team of four, we were tasked with taking a prototype design of a 
+                        food truck ordering app completed in a previous class and translate it into 
+                        a fully functioning coded version with PHP menu integration. For my role, I was 
+                        one of our designers and one of our coders. After we made additional changes to 
+                        \our given prototype design, I got a jumpstart coding some microinteractions to 
+                        be later imported into the coded build of the project. I then had two rounds of 
+                        user interviewing, interviewing three users each time, and we took our feedback 
+                        from them and made the according changes to our final build. The eventual final 
+                        build reflects those changes, and presents an optimized user flow that creates 
+                        the perfect experience for users ordering from the KC’s Fresh Fruit and Smoothies truck.                        </p>
+                    </div>
+
+                    <!-- Team sidebar -->
+                    <div class="team-sidebar">
+                        <p class="team-label">Team null</p>
+                        <div class="team-lead">
+                            <p class="team-lead-name">Christopher Straface</p>
+                            <p class="team-lead-role">Designer/Coder</p>
+                        </div>
+                        <div class="team-divider"></div>
+                        <div class="team-members">
+                            <!--
+                                Link to teammates' case studies.
+                                If a URL isn't ready yet, remove the href and change <a> to <span>.
+                            -->
+                            <a class="team-member" href="https://idm216-cct52-casestudy.netlify.app/" target="_blank" rel="noopener noreferrer">Chloe To</a>
+                            <a class="team-member" href=" https://idm216-jls922-casestudy.netlify.app/" target="_blank" rel="noopener noreferrer">Jeremy Senh</a>
+                            <a class="team-member" href="https://tomchen1067.netlify.app/case_study/idm216" target="_blank" rel="noopener noreferrer">Tom Chen</a>
+                            <!-- Add or remove team members as needed -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION 2 — CONTEXT & CHALLENGE
+                     Cover: Background · The Problem · Goals
+                ════════════════════════════════════════ -->
+                <div class="full-section" id="context">
+                    <p class="section-heading">Background</p>
+                    <h2 class="section-title">Context &amp; Challenge</h2>
+                    <p class="section-body">
+                    In this project, we had 10 weeks to create a fully developed version of one of the designed prototypes 
+                    for a food truck ordering app from IDM215. We chose a prototype design for KC’s Fresh Fruit & Smoothie. 
+                    This developed version should allow users to view the full menu, submit an order, and be able to edit and remove their order. 
+                    This was a team-based project, where I filled the role of one of the designers and coders.
+                    </p>
+
+                    <!-- Goals / problem callout cards -->
+                    <div class="callout-grid" style="margin-top: 36px;">
+                        <div style="grid-column: 1 / -1; margin-bottom: 4px;">
+                            <p class="section-heading" style="margin-bottom:0;">The Problem &amp; Goals</p>
+                        </div>
+
+                        <div class="callout-card">
+                            <div class="callout-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                                </svg>
+                            </div>
+                            <p class="callout-label">The Problem</p>
+                            <p class="callout-text">Need to translate the prototype into a fully functional app that meets user needs and business objectives.</p>
+                        </div>
+
+                        <div class="callout-card">
+                            <div class="callout-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                </svg>
+                            </div>
+                            <p class="callout-label">Goal 1</p>
+                            <p class="callout-text">Fix any bugs or issues in the initial prototype.</p>
+                        </div>
+
+                        <div class="callout-card">
+                            <div class="callout-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <p class="callout-label">Goal 2</p>
+                            <p class="callout-text">Collect user feedback and iterate on the established design.</p>
+                        </div>
+
+                        <div class="callout-card">
+                            <div class="callout-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <p class="callout-label">Goal 3</p>
+                            <p class="callout-text">Fully code and implement the final project with all features and functionality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION 3 — PROCESS & INSIGHT
+                     Walk through your process step by step.
+                     Add/remove .process-sub subheadings freely.
+                     Use .img-placeholder blocks for images at each stage.
+                     Add data-lightbox to any <img> to enable click-to-expand.
+                ════════════════════════════════════════ -->
+                <div class="full-section" id="process">
+                    <p class="section-heading">How We Got There</p>
+                    <h2 class="section-title">Process &amp; Insight</h2>
+                    <p class="section-body">
+                        [Introduce your process. What was your role on the team? What were the major phases of work, and what were you specifically responsible for vs. the group?]
+                    </p>
+
+                    <!-- ── Sub-section 1
+                         Rename to match your actual process stage, e.g.:
+                         "Research", "Discovery", "Planning", "Wireframing", "Branding"
+                    ── -->
+                    <h3 class="process-sub">My Role and Contributions</h3>
+                    <p class="section-body">
+                    My role on the team was as a designer and as a coder. As a designer, along with helping with the overall design of our final product,
+                    I primarily contributed to the user research portion of the process, collecting feedback and relaying it to my group so we know what 
+                    changes needed to be made. As a coder, I helped program some of the microinteractions that went into the final project, enhancing the overall 
+                    experience and translating some of our key design ideas into functioning code.                    </p>
+                    <!-- <p class="section-body" style="margin-top:16px;">
+                        [Optional second paragraph for additional context or a specific challenge you navigated.]
+                    </p> -->
+
+                    <!-- <div class="img-placeholder" style="margin-top: 28px; aspect-ratio: 16/7;">
+                        <span class="img-placeholder-label">Image — e.g. research notes, task board, sitemap, user journey</span>
+                    </div> -->
+
+                    <!-- ── Sub-section 2 ── -->
+                    <h3 class="process-sub">Microinteractions and Functionality</h3>
+                    <p class="section-body">
+                    Based on our final design, I listed out the microinteractions that were already present in our design, 
+                    and defined the details of those interactions. Then, using those definitions as a template, I recreated 
+                    them in CodePen using HTML, CSS, and JavaScript, and made additional improvements to them. That way, they 
+                    could be directly added to our project’s code with little changes needed to be made.
+                    </p>
+                    <br>
+                    <p class="section-body">
+                    Below is one of the microinteractions I created in CodePen — the size selection buttons, used when selecting the size of a chosen menu item.
+                    </p>
+
+                    <div class="img-placeholder" style="aspect-ratio: 16/9; margin-top: 28px;">
+                        <iframe height="500" style="width: 100%;" scrolling="no"
+                            title="[Pen title]"
+                            src="https://codepen.io/ChristopherStraface/embed/gbMQmKd?default-tab=html%2Cresult&theme-id=dark"
+                            frameborder="no" loading="lazy" allowtransparency="true">
+                        </iframe>                    
+                    </div>
+                    
+                    <br>
+                    <p class="section-body">
+                    The second microinteraction I made was for the quantity selection buttons, which allow users to select how many of each item they want to order.
+                    </p>                    
+
+                    <div class="img-placeholder" style="aspect-ratio: 16/9; margin-top: 28px;">
+                        <iframe height="500" style="width: 100%;" scrolling="no"
+                            title="[Pen title]"
+                            src="https://codepen.io/ChristopherStraface/embed/yyJjpdx?default-tab=html%2Cresult&theme-id=dark"
+                            frameborder="no" loading="lazy" allowtransparency="true">
+                        </iframe>                    
+                    </div>
+
+                    <br>
+                    <p class="section-body">
+                    The third and final microinteraction I created was for the ingredient selection, which allows users to choose which ingredients they want in their chosen menu item.
+                    </p>
+
+                    <div class="img-placeholder" style="aspect-ratio: 16/9; margin-top: 28px;">
+                        <iframe height="500" style="width: 100%;" scrolling="no"
+                            title="[Pen title]"
+                            src="https://codepen.io/ChristopherStraface/embed/qENYpEJ?default-tab=html%2Cresult&theme-id=dark"
+                            frameborder="no" loading="lazy" allowtransparency="true">
+                        </iframe>                    
+                    </div>                   
+
+                    <!-- ── Sub-section 3 ── -->
+                    <h3 class="process-sub">Interviews and Feedback</h3>
+                    <p class="section-body">
+                    Additionally, I also handled much of the interviewing process. Before these interviews were conducted,
+                    I first created a survey that would go along with each interview, outlining our questions and providing
+                    room to note down user feedback which we would review accordingly after each one.
+                    </p>
+
+                    <!-- CodePen embed OR prototype screenshot — delete whichever you don't use -->
+                    <div class="img-placeholder" style="aspect-ratio: 14/7; margin-top: 28px;">
+                        
+                        <img src="img/UXForm.png" alt="Side-by-side views of the UX form. One side is an example of the questions, and the other being a sample of our data from the results.
+                        " data-lightbox style="height: 100%; width: auto;">
+                    
+                    </div>
+                    <br>
+
+                    <p class="section-body">
+                    Of course, after this was the interviews themselves. The first round of interviews we  
+                    had was with three people, where we would do a Zoom video call, and have the participant 
+                    share their screen after we sent them the web link to our latest build of our prototype. 
+                    Then, we would relay our questions to them, and use the form to record their answers, and 
+                    write down any additional notes and feedback that they had.
+                    </p>
+
+                    <!-- CodePen embed OR prototype screenshot — delete whichever you don't use -->
+                    <div class="img-placeholder" style="aspect-ratio: 16/9; margin-top: 28px;">
+                        
+                        <img src="img/InterviewImage.png" alt="Screencap of our interview process. On the left is the participant's screen, where they are navigating our prototype, and on the right is our team taking notes and relaying questions to the participant.
+                        " data-lightbox style="height: 100%; width: auto;">
+                    
+                    </div>
+
+                    <br>
+                    <p class="section-body">
+                    Following this, we made changes to our prototype based on the feedback 
+                    we received from the first round of interviewing. After this, we immediately 
+                    went back and did three more user interviews as a final guide towards how we should 
+                    shape our final design, once the allotted weeks were coming to an end.
+                    </p>
+
+                    <!-- CodePen embed OR prototype screenshot — delete whichever you don't use -->
+                    <div class="img-placeholder" style="aspect-ratio: 16/7; margin-top: 28px;">
+                        
+                        <img src="img/InterviewImageBeta.png" alt="A second screencap of our interview process. On the left is the participant's screen, where they are navigating our prototype, and on the right is our team taking notes and relaying questions to the participant.
+                        " data-lightbox style="height: 100%; width: auto;">
+                    
+                    </div>
+
+                    <br>
+                    <p class="section-body">
+                    After these rounds of interviews, we had all of the information we needed to create
+                    the final version of our project, with sufficient user data from our interviewing. 
+                    Once we analyzed the results and determined how to best take into consideration our feedback, 
+                    we just had to implement them into our final product before our deadline.
+                    </p>
+                    <br>
+
+                    <!-- ── Side-by-side comparison (optional)
+                         Great for showing a before/after or competitor reference.
+                         Delete this block if you don't need it.
+                    ── -->
+                    <!-- <div class="compare-grid" style="margin-top: 36px;">
+                        <div class="compare-item">
+                            <div class="compare-img"> -->
+                                <!-- <img src="img/before.png" alt="[Before state]" data-lightbox> -->
+                                <!-- <span class="img-placeholder-label">Before</span>
+                            </div>
+                            <p class="compare-label">[Label — e.g. "Before iteration"]</p>
+                        </div>
+                        <div class="compare-item">
+                            <div class="compare-img"> -->
+                                <!-- <img src="img/after.png" alt="[After state]" data-lightbox> -->
+                                <!-- <span class="img-placeholder-label">After</span>
+                            </div>
+                            <p class="compare-label">[Label — e.g. "After critique"]</p>
+                        </div>
+                    </div> -->
+
+                    <!-- Optional: link to a live version or earlier build -->
+                    <!-- <p class="section-description" style="margin-top: 32px;">
+                        [Optional label — e.g. "Static prototype"]:
+                        <a href="[URL]" style="color: var(--blue-accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">[link text →]</a>
+                    </p>
+                </div> -->
+
+                <!-- ═══════════════════════════════════════
+                     SECTION 4 — SOLUTION
+                     Show off 3 key design decisions/features.
+                     Alternate image placement: add class="reverse" to flip.
+                     All images support data-lightbox for click-to-expand.
+                ════════════════════════════════════════ -->
+                <div class="full-section" id="solution">
+                    <p class="section-heading">Outcomes &amp; Reflection</p>
+                    <h2 class="section-title">Solution</h2>
+                    <p class="section-body">
+                    Our final design tackled some of our biggest suggestions from our interview feedback,
+                     and considerable changes were made to the final build to solve these problems and create 
+                     one cohesive critical path. This build also contains full PHP integration, officially meeting 
+                     all requirements asked from the project now that we have also translated the entire design into 
+                     a functional, coded build.                    
+                    </p>
+
+                    <div class="feature-list">
+
+                        <!-- ── Feature 1 (image left) ── -->
+                        <div class="feature-item">
+                            <div class="feature-img">
+                                <img src="img/Comparison1.png" alt="A comparison image showing the before and after states of our order confirmation number." data-lightbox style="height: 100%; width: auto;">
+                            </div>
+                            <div class="feature-text">
+                                <p class="feature-text-label">Feature 01</p>
+                                <h3 class="feature-text-title">Order Number Size Increase</h3>
+                                <p class="feature-text-body">One of these changes was to increase the size of our order number on the confirmation screen, which was a consistent issue during user testing. Our final version now displays the number much larger and takes up more of the screen, making it easier for KC to view from the view of her truck’s window.</p>
+                            </div>
+                        </div>
+
+                        <!-- ── Feature 2 (image right) ── -->
+                        <div class="feature-item reverse">
+                            <div class="feature-img">
+                                <img src="img/Comparison2.png" alt="A comparison image showing the before and after states of our tip selections." data-lightbox style="height: 100%; width: auto;">
+                            </div>
+                            <div class="feature-text">
+                                <p class="feature-text-label">Feature 02</p>
+                                <h3 class="feature-text-title">Tip Selection Options</h3>
+                                <p class="feature-text-body">Another change we made was to our tip selection options. Now, there is an option to select “No Tip,” when before, users were forced to select a tip amount to complete the ordering flow. In our final build, this is no longer a problem, and users can choose not to tip while still being able to advance.</p>
+                            </div>
+                        </div>
+
+                        <!-- ── Feature 3 (image left) ── -->
+                        <div class="feature-item">
+                            <div class="feature-img">
+                                <img src="img/Comparison3.png" alt="A comparison image showing the before and after states of our receipt screens, now showing more personality." data-lightbox style="height: 100%; width: auto;">
+                                <!-- <span class="img-placeholder-label">Feature screenshot</span> -->
+                            </div>
+                            <div class="feature-text">
+                                <p class="feature-text-label">Feature 03</p>
+                                <h3 class="feature-text-title">Brand and Personality</h3>
+                                <p class="feature-text-body">A consistent issue was that our build lacked some of the warmth and friendliness in its branding that had become well known of the truck’s owner, KC. To remedy this, we added in new text and emojis to lighten the experience and aim to make the user smile more. We also changed the color palette on some screens to feel warmer and less drab and monochromatic.</p>
+                            </div>
+                        </div>
+
+                        <!--
+                            To add a 4th feature: copy a .feature-item block above.
+                            Alternate reverse/no-reverse for visual variety.
+                        -->
+
+                    </div>
+
+                    <p class="section-description" style="margin-top: 32px;">
+                        Final project:
+                        <a href="https://digmstudents.westphal.drexel.edu/~tc3363/idm216/final/index.php" style="color: var(--blue-accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">Link to final project →</a>
+                    </p>
+                </div>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION 5 — RESULTS
+                     Was it a success? Tie back to your goals.
+                     Lessons learned + what you'd change.
+                ════════════════════════════════════════ -->
+                <div class="full-section" id="results">
+                    <p class="section-heading">Outcomes &amp; Reflection</p>
+                    <h2 class="section-title">Results</h2>
+                    <p class="section-body">
+                    In conclusion, our team was able to meet all of the requirements for this project, 
+                    and in ten weeks produced a functional, coded build of an ordering app for the KC’s Fresh 
+                    Fruit & Smoothies truck. The build allows users to order everything off of the original menu, 
+                    and uses PHP to track and retrieve data from a separate database which dynamically displays and 
+                    updates that information. We received constant feedback during different stages of our project 
+                    and were able to address each critique and deliver an optimized final build as a result.                     
+                    </p>
+                    <br>
+
+                    <p class="section-body">
+                    Thanks to the collaboration between myself and my team members, we were able to complete 
+                    this project and keep up with our many assigned tasks within the deadline. I believe I contributed 
+                    well to my roles in this project, and if I could do anything differently, I would have changed my 
+                    approach to the user interviews; While they lead to successful findings and changes, the interview 
+                    process and the way I structured questions lead to some repeating statements. Nonetheless, this 
+                    project provided an excellent opportunity to learn more about the professional design and development 
+                    process, and my team and I have come out stronger in both regards as a result.                    
+                    </p>
+
+                    <!-- Reflection block — italic pull quote style -->
+                    <!-- <div class="reflection-block">
+                        <p>
+                            [Lessons learned. What would you do differently? What surprised you? What skill or mindset did this project develop in you? Keep it thoughtful — reflection shows maturity as a designer.]
+                        </p>
+                    </div> -->
+                </div>
+
+            </div><!-- /content-area -->
+
+            <!-- Card footer — edit tags to match your project -->
+            <div class="card-footer">
+                <span class="tag">IDM216</span>
+                <span class="tag">UX Design</span>
+                <span class="tag">Winter 2026</span>
+                <!-- Add more: <span class="tag">HTML/CSS</span> etc. -->
+            </div>
+
+        <!-- </div> -->
     </div>
- 
-</body>
 
+    <!-- ═══════════════════════════════════════
+         SCRIPTS — Lightbox only
+    ════════════════════════════════════════ -->
+    <script>
+        const lightbox    = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('img[data-lightbox]').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', e => {
+            if (e.target !== lightboxImg) lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        });
+    </script>
+
+</body>
 </html>
